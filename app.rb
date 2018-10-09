@@ -10,7 +10,7 @@ class App < Sinatra::Base
 
   get '/square/:number' do
     @number = params[:number].to_i
-    "#{@number*@number}"
+    "#{@number*@number}".to_s
   end
 
   get '/say/:number/:phrase' do
@@ -45,6 +45,15 @@ class App < Sinatra::Base
     elsif @operation == "divide"
       "#{@number1/@number2}"
 
+      # case params[:operation]
+      #    when 'add'
+      #      answer = (number1 + number2).to_s
+      #    when 'subtract'
+      #      answer = (number1 - number2).to_s
+      #    when 'multiply'
+      #      answer = (number1 * number2).to_s
+      #    when 'divide'
+      #      answer = (number1 / number2).to_s
 
     end
   end
